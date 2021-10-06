@@ -1,0 +1,17 @@
+RewriteEngine on
+
+RewriteCond $1 !^(index\.php)
+RewriteRule ^login$ login.php [L]
+RewriteRule ^edit_about$ index.php?page=edit_about&id=$1[NC,L]
+RewriteRule ^tampil_produk$ index.php?page=tampil_produk&id=$1[NC,L]
+#kalau untuk menangkap variabel pakai -(.*)
+
+RewriteRule ^tampil_berita$ index.php?page=tampil_berita&id=$1[NC,L]
+RewriteRule ^tampil_galeri$ index.php?page=tampil_galeri&id=$1[NC,L]
+RewriteRule ^edit_contact$ index.php?page=edit_contact&id=$1[NC,L]
+
+
+
+RewriteRule ^home$ user/index.php [L]
+
+Options All -Indexes

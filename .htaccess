@@ -1,0 +1,16 @@
+
+RewriteEngine on
+
+RewriteCond $1 !^(index\.php)
+RewriteRule ^$ index.php?module=home [L]
+#untuk front end
+RewriteRule ^about$ index.php?page2=about [L]
+RewriteRule ^produk$ index.php?page2=produk [L]
+RewriteRule ^galeri$ index.php?page2=galeri [L]
+RewriteRule ^berita$ index.php?page2=berita [L]
+RewriteRule ^contact$ index.php?page2=contact [L]
+
+#kalau untuk menangkap variabel pakai -(.*)
+RewriteRule ^detail-berita-(.*)$ index.php?page2=detail-berita&slug=$1 [L]
+
+Options All -Indexes
